@@ -1,12 +1,43 @@
-# React + Vite
+# Proyecto Decameron - Desarrollo Full-Stack
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicativo web con backend en **Laravel 9**, y frontend usando **React + Vite** , mas el framework de estilos **Tailwind**
+y la UI Suite de React llamada **PrimeReact** y base de datos en **PostgreSQL**
 
-Currently, two official plugins are available:
+## Requisitos para ejecución
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- PHP ^8.1
+- Composer - Gestión de paqueteria
+- Node.js ^18
+- NPM - Gestión de paqueteria
+- PostgreSQL
+- Git - para clonacion de repositorio
 
-## Expanding the ESLint configuration
+## Clonar e instalar proyecto backend de Laravel
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clonar el repositorio backend:
+   - git clone https://github.com/SantiPEC/decameron_back.git
+
+2. Configurar codigo:
+    - En el archivo env.ejemplo, estan ajustadas las configuraciones para poder conectar el proyecto con la base de datos, solo sería poner, nombre de la bd, usuario y contraseña de la base de datos que se configure de manera local.
+
+3. Instalar backend:
+    - cd ruta_a_la_carpeta/decameron_back
+    - composer install
+    - cp .env.example .env
+    - php artisan key:generate
+    - php artisan migrate
+    - php artisan serve
+    - iniciar en consola: php artisan serve
+
+## Clonar e instalar proyecto frontend de React
+
+1. Clonar repositorio frontend:
+    - git clone https://github.com/SantiPEC/decameron_front.git
+
+2. Instalar frontend:
+    - cd ruta_a_la_carpeta/decameron_front
+    - npm install
+    - npm run dev
+    - http://localhost:5173
+
+
